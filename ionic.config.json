@@ -1,0 +1,7 @@
+{
+  "name": "digipedia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
