@@ -1,0 +1,12 @@
+<ion-card >
+    <div class="flex justify-center h-28">
+      @if(digimon.image ){
+        <ion-img (ionError)="errorImage(digimon)" [src]="digimon.image" alt="digmion" />
+      }@else{
+        <img src="src/assets/images/digimon_game.png" alt="digimon">
+      }
+    </div>
+    <ion-card-header>
+      <ion-card-subtitle class="text-center font-bold">{{digimon.name}}</ion-card-subtitle>
+    </ion-card-header>
+</ion-card>

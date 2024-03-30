@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Detalles</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">
+                Cerrar
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="py-4" fullscreen="true" [scrollEvents]="false">
+   @if(digimonDetail){
+    <div class="py-8">
+        <div class="text-center">
+            <p class="font-bold text-2xl">{{digimonDetail.name}}</p>
+            <p>{{digimonDetail.id}}</p>
+        </div>
+        <div class="flex justify-center image-container">
+            <ion-img (ionError)="onErrorImage(digimonDetail)" [src]="digimonDetail.images[0].href" alt="digimon_image" />
+        </div>
+        <app-digimon-attributes [levels]="digimonDetail.levels" [attributes]="digimonDetail.attributes" [types]="digimonDetail.types" />
+        <app-digimon-field [fields]="digimonDetail.fields" />
+    </div>
+   }
+</ion-content>

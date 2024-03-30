@@ -1,0 +1,26 @@
+<div class="py-3 flex flex-row justify-around">
+    <div>
+        <p class="font-bold">Nivel</p>
+        <div>
+            @for(level of levels; track level.id){
+                <p>{{level.level}}</p>
+            }
+        </div>
+    </div>
+    <div>
+        <p class="font-bold">Atributos</p>
+        <div>
+            @for(attribute of attributes; track attribute.id){
+                <p>{{attribute.attribute}}</p>
+            }
+        </div>
+    </div>
+    <div>
+        <p class="font-bold">Tipos</p>
+        <div>
+            @for(typeDetail of types; track typeDetail.id){
+                <p>{{typeDetail.type}}</p>
+            }
+        </div>
+    </div>
+</div>

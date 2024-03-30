@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Digimons</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Digimons</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+   @for(digimon of animals; track digimon.id){
+      <ion-col size="6" size-md="4" size-lg="2">
+        <app-digimon-card [digimon]="digimon" (click)="openModal(digimon.id)"></app-digimon-card>
+      </ion-col>
+    }
+  </ion-row>
+  </ion-grid>
+</ion-content>

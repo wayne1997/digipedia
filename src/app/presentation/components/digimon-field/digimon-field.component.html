@@ -1,0 +1,8 @@
+<div class="text-center px-3">
+    <p class="font-bold">Fields</p>
+    <div class="flex justify-center pt-4">
+        @for(field of fields; track field.id){
+            <img class="mx-3" [src]="field.image" alt="">
+        }
+    </div>
+</div>
