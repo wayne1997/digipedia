@@ -8,11 +8,12 @@
 *.tmp.*
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
-
+android
+ios
 *.log
 log.txt
 
-
+variables.txt
 /.sourcemaps
 /.versions
 /coverage
@@ -71,3 +72,6 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+
+resources/ios/**/*
+resources/android/**/*
