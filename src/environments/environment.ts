@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase: "AGREGAR FIREBASE SDK CONTENT - JSON OBJECT",
+  firebase: "AGREGAR FIREBASE SDK CONTENT - JSON",
 };
 
 /*
