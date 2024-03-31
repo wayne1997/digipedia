@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Digipedia</string>
+    <string name="title_activity_main">Digipedia</string>
+    <string name="package_name">com.chiriboga.digipedia</string>
+    <string name="custom_url_scheme">com.chiriboga.digipedia</string>
+</resources>

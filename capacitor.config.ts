@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'digipedia',
+  appId: 'com.chiriboga.digipedia',
+  appName: 'Digipedia',
   webDir: 'www',
   server: {
     androidScheme: 'https'

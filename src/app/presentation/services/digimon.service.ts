@@ -12,9 +12,11 @@ export class DigimonService {
   constructor(private http: HttpClient) {
   }
 
-  getDigimons(pageSize: number = 20) {
-    return this.http.get<DigimonResponse>(`https://digi-api.com/api/v1/digimon?pageSize=${pageSize}`);
+  getDigimonsBySizeAndNumber(pageNumber = 0,pageSize: number = 20) {
+    const response = this.http.get<DigimonResponse>(`https://digi-api.com/api/v1/digimon?page=${pageNumber}&pageSize=${pageSize}`);
+    return response;
   }
+
 
   getDigimon(digimonId: number) {
     return this.http.get<DigimonDetailResponse>(`https://digi-api.com/api/v1/digimon/${digimonId}`);

@@ -8,6 +8,6 @@ import { Field } from '@interfaces/digimon-details-response.interface';
   styleUrl: './digimon-field.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DigimonFieldComponent { 
+export class DigimonFieldComponent {
   @Input() fields!: Field[];
 }

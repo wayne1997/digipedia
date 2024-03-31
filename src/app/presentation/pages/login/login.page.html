@@ -1,25 +1,31 @@
-<ion-content  [fullscreen]="true">
-  <div class="flex justify-center items-center bg-indigo-500 h-1/4 rounded-b-3xl">
-    <div class="text-center text-white">
-      <p class="font-bold text-2xl py-3" >Bienvenido a Digipedia</p>
-      <p>Un lugar donde puedes aprender mucho sobre digimons</p>
+<ion-content [fullscreen]="true">
+  <div class="flex justify-center items-center bg-indigo-500 rounded-b-3xl h-1/4">
+    <div class="text-center text-white pt-2">
+      <p class="font-bold text-2xl" >Bienvenido a Digipedia</p>
+      <p class="px-4">Un lugar donde puedes aprender mucho sobre digimons</p>
     </div>
   </div>
-  <form [formGroup]="loginForm" (ngSubmit)="login()" class="flex justify-center items-center h-1/2">
-      <div class="w-full px-10">
-      <div class="py-3">
+  <form [formGroup]="loginForm" (ngSubmit)="login()" class=" pt-10 flex justify-center items-center">
+    <div class="w-full max-w-xs">
+      <div class="py-2">
         <ion-label class="font-bold">Correo electrónico</ion-label>
         <ion-input formControlName="email" class="border-2 rounded-2xl"  type="text" placeholder="ejemplo23@micorreo.com">
           <ion-icon color="tertiary" class="px-2" size="large" slot="start" name="mail"></ion-icon>
         </ion-input>
+        @if(email?.errors?.['required'] && email?.touched) {
+          <p class="text-red-600">Este campo es requerido.</p>
+        }
       </div>
-      <div class="py-3">
+      <div class="py-2">
         <ion-label class="font-bold">Contraseña</ion-label>
         <ion-input formControlName="password" class="border-2 rounded-2xl" type="password" placeholder="Contraseña">
           <ion-icon color="tertiary"size="large" class="px-2" slot="start" name="lock-closed"></ion-icon>
         </ion-input>
+        @if(password?.errors?.['required'] && password?.touched) {
+          <p class="text-red-600">Este campo es requerido.</p>
+        }
       </div>
-      <div class="py-5">
+      <div class="py-4">
         <ion-button type="submit" color="tertiary"  expand="block" shape="round">
           Inciar sesión
         </ion-button>

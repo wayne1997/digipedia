@@ -6,6 +6,7 @@
     "outDir": "./dist/out-tsc",
     "paths": {
       "@interfaces/*": ["src/app/interfaces/*"],
+      "@core/*": ["src/app/core/*"],
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from '@core/guards/authentication.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./presentation/pages/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./presentation/pages/home/home.module').then( m => m.HomePageModule),
+    canActivate: [AuthenticationGuard]
   },
   {
     path: '',
@@ -17,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./presentation/pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./presentation/pages/login/login.module').then( m => m.LoginPageModule),
   },
 ];
 
